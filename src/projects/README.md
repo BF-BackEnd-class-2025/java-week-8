@@ -21,6 +21,13 @@ yet introducing databases (use lists or maps for data storage).
         <artifactId>spring-boot-starter-test</artifactId>
         <scope>test</scope>
     </dependency>
+
+    <!-- Spring Boot DevTools -->
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-devtools</artifactId>
+        <optional>true</optional>
+    </dependency>
     
     <!-- Spring Data JPA -->
     <dependency>
