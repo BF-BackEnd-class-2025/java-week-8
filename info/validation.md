@@ -3,6 +3,7 @@
 ## 🎯 Goal
 
 Learn how to use **Spring Boot Starter Validation** to validate user input automatically using annotations like:
+
 - `@NotBlank`
 - `@NotNull`
 - `@Email`
@@ -21,7 +22,7 @@ In your `pom.xml` (Maven project):
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-validation</artifactId>
 </dependency>
-````
+```
 
 This brings in the **Jakarta Bean Validation API** (previously `javax.validation`) and its default implementation (`Hibernate Validator`).
 
@@ -75,7 +76,7 @@ public class Book {
 ## 🧠 Common Validation Annotations
 
 | Annotation               | Applies To          | Description                       |
-|--------------------------|---------------------|-----------------------------------|
+| ------------------------ | ------------------- | --------------------------------- |
 | `@NotNull`               | Any type            | Must not be null                  |
 | `@NotBlank`              | String              | Must not be empty or whitespace   |
 | `@NotEmpty`              | String, Collections | Must not be null or empty         |
@@ -115,11 +116,11 @@ public class BookController {
 }
 ```
 
-* The `@Valid` annotation before `@RequestBody` tells Spring:
+- The `@Valid` annotation before `@RequestBody` tells Spring:
 
   > "Validate this object based on its annotations before executing the method."
 
-* If validation fails, Spring automatically throws an exception and returns a **400 Bad Request**.
+- If validation fails, Spring automatically throws an exception and returns a **400 Bad Request**.
 
 ---
 
@@ -134,7 +135,7 @@ public class BookController {
 }
 ```
 
-### 🧾 Response:
+### 🧾 Response
 
 ```json
 {
@@ -154,7 +155,7 @@ public class BookController {
 ## ✅ Summary
 
 | Feature                            | Purpose                            |
-|------------------------------------|------------------------------------|
+| ---------------------------------- | ---------------------------------- |
 | `spring-boot-starter-validation`   | Enables input validation           |
 | `@Valid`                           | Triggers validation in controllers |
 | `jakarta.validation.constraints.*` | Provides validation annotations    |
@@ -164,10 +165,9 @@ public class BookController {
 
 ## 💡 Best Practices
 
-* Always validate incoming data (especially for `POST` and `PUT`).
-* Use `@Valid` or `@Validated` annotations in controllers.
-* Add custom messages to help API consumers understand the issue.
-* Use `@ControllerAdvice` for consistent error handling.
+- Always validate incoming data (especially for `POST` and `PUT`).
+- Use `@Valid` or `@Validated` annotations in controllers.
+- Add custom messages to help API consumers understand the issue.
+- Use `@ControllerAdvice` for consistent error handling.
 
 ---
-

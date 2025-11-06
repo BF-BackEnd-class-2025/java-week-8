@@ -46,8 +46,8 @@ private Long id;
 * **Usage:** Recommended for databases that support sequences, including Oracle, PostgreSQL, and DB2.
 * **Key Attributes:**
 
-    * `sequenceName` → the name of the database sequence.
-    * `allocationSize` → the number of IDs to preallocate (default is 50).
+  * `sequenceName` → the name of the database sequence.
+  * `allocationSize` → the number of IDs to preallocate (default is 50).
 
 ---
 

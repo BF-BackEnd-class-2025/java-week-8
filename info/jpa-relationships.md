@@ -6,6 +6,7 @@ These annotations describe **entity relationships** — how data in one table co
 ---
 
 ## 🧱 Types of Relationships
+
 | Relationship                  | Meaning                                                      | Example                                                    |
 |-------------------------------|--------------------------------------------------------------|------------------------------------------------------------|
 | **One-to-One**                | One record relates to exactly one other record               | A User has one Profile                                     |
@@ -16,7 +17,8 @@ These annotations describe **entity relationships** — how data in one table co
 
 ## 1) **One-to-Many / Many-to-One (Most Common)**
 
-### Example Scenario:
+### Example Scenario
+
 - A **Movie** can have **many Reviews**
 - A **Review** belongs to **one Movie**
 
@@ -155,7 +157,7 @@ public class Course {
 
 Bidirectional relationships can cause infinite loops in JSON:
 
-```
+```txt
 Movie → Review → Movie → Review → ...
 ```
 
@@ -194,4 +196,3 @@ This keeps API responses clean and avoids leaking DB structure.
 | JSON recursion issues     | `@JsonManagedReference` / `@JsonBackReference` | Or use DTOs                                         |
 
 ---
-

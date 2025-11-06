@@ -2,33 +2,33 @@
 
 In a well-structured Spring Boot project, your code is usually organized into **4 main packages**:
 
-```
-
+```txt
 com.example.projectname
 │
 ├── model
 ├── repository
 ├── service
 └── controller
-
-````
+```
 
 Each layer has a **specific responsibility**, making your application easier to maintain, test, and scale.
 
 ---
 
-### 🧱 1. `model` (or `entity`)
+## 🧱 1. `model` (or `entity`)
 
 **Purpose:**  
 This package contains all your **data models**, which are mapped to database tables using **JPA annotations**.
 
 **Common annotations:**
+
 - `@Entity` → marks the class as a database entity.
 - `@Table(name = "table_name")` → (optional) specifies the table name.
 - `@Id` → marks the primary key.
 - `@GeneratedValue` → defines how the ID is auto-generated.
 
 **Example:**
+
 ```java
 package com.example.projectname.model;
 
@@ -45,7 +45,7 @@ public class User {
 
     // Getters, setters, constructors
 }
-````
+```
 
 🧠 Think of the **model** as the *blueprint* of your database tables.
 
@@ -184,7 +184,7 @@ public class UserController {
 
 ## 🧩 How the Layers Work Together
 
-```
+```txt
 [Client / Frontend] 
        ↓
 [Controller] → handles HTTP request (API endpoint)

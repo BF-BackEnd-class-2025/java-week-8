@@ -1,7 +1,6 @@
 
 # JPA Repository with PostgreSQL
 
-
 ## 🧩 What is JPA?
 
 **JPA (Java Persistence API)** is a specification that defines how Java objects (entities) map to database tables.  
@@ -14,15 +13,17 @@ Spring Data JPA provides an abstraction layer over JPA, making database access s
 A **JPA repository** is an interface that allows you to perform CRUD (Create, Read, Update, Delete) operations directly on your entities.
 
 It extends:
+
 - `CrudRepository` — basic CRUD methods.
 - `PagingAndSortingRepository` — adds pagination and sorting.
 - `JpaRepository` — adds extra JPA-related features.
 
 Example:
+
 ```java
 public interface UserRepository extends JpaRepository<User, Long> {
 }
-````
+```
 
 ---
 
@@ -144,4 +145,3 @@ public class UserController {
 ```
 
 ---
-

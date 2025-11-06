@@ -9,7 +9,7 @@ You don’t write SQL — instead, you follow specific naming patterns.
 
 ## ✅ Basic Structure
 
-```
+```java
 findBy + FieldName + Condition
 readBy + FieldName + Condition
 getBy + FieldName + Condition
@@ -174,4 +174,3 @@ public interface BookRepository extends JpaRepository<Book, Long> {
 | Use `@Query` for complex queries | ✅     |
 
 ---
-
